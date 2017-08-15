@@ -105,8 +105,11 @@ public class AIUIProcessor extends PlayControllerListenerAdapter implements AIUI
 		public void setAgent(AIUIAgent agent){
 			mAIUIAgent = agent;
 		}
-		
-		private void registerReceiver(){
+
+	/**
+	 * 动态注册休眠和音量控制广播接收器
+	 */
+	private void registerReceiver(){
 			mSleepReceiver = new BroadcastReceiver() {
 
 				@Override
